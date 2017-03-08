@@ -23,8 +23,6 @@ module.exports = {
             { from: './src/main/app.js'},
             { from: './src/main/index.html'},
             { from: './src/main/res', to: 'res'}
-        ],{
-            debug: 'debug'
-        })
+        ])
     ]
 }
