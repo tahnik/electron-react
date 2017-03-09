@@ -5,10 +5,18 @@ var CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     context: path.join(__dirname, '../app'),
-    entry: './src/main/js/index.js',
+    devtool: 'source-map',
+    entry: {
+        'app': [
+            'babel-polyfill',
+            'react-hot-loader/patch',
+            './src/main/js/index.js'
+        ]
+    },
     output: {
-        path: './app/build',
+        path: path.resolve(__dirname, './app/build'),
         filename: 'app.bundle.js',
+        publicPath: '/'
     },
     module: {
         loaders: [{
@@ -20,9 +28,13 @@ module.exports = {
     },
     plugins: [
         new CopyWebpackPlugin([
-            { from: './src/main/app.js'},
+            { from: './src/main/app.js', to: 'app/build'},
             { from: './src/main/index.html'},
             { from: './src/main/res', to: 'res'}
-        ])
+        ],
+        {
+            debug: 'debug'
+        }),
+        new webpack.NamedModulesPlugin()
     ]
 }
