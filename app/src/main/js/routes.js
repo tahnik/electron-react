@@ -10,15 +10,15 @@ import {
 } from 'react-router-dom';
 
 export default class extends Component {
-    render() {
-        return (
-            <Router>
-                <div>
-                    <Header />
-                    <Route exact path="/" component={Main} />
-                    <Route path="/view/:name" component={ViewItem} />
-                </div>
-            </Router>
-        )
-    }
+	render() {
+		return (
+			<Router>
+				<div>
+					<Header />
+					<Route exact path="/" component={Main} />
+					<Route path="/view/:name" component={ViewItem} />
+				</div>
+			</Router>
+		)
+	}
 }

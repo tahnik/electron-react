@@ -17,7 +17,12 @@ class ShowListItem extends Component {
 			<div className="row" >
 				<div className="col s12 m4 offset-m4" >
 					<Link to={"/"}>
-						<button type="button" className="waves-effect waves-light btn" style={{ marginTop: 10, marginBottom: 10 }}>Go Back</button>
+						<button 
+						type="button" 
+						className="waves-effect waves-light btn" 
+						style={{ marginTop: 10, marginBottom: 10 }}>
+						Go Back
+						</button>
 					</Link>
 					<h1>{ item.name }</h1>
 					<p>{ item.description }</p>
