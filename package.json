@@ -41,12 +41,5 @@
     "webpack-dev-server": "^2.4.1",
     "webpack-node-externals": "^1.2.0",
     "write-file-webpack-plugin": "^4.0.0"
-  },
-  "jshintConfig": {
-    "esversion": 6,
-    "undef": true,
-    "unused": true,
-    "browser": true,
-    "node": true
   }
 }
