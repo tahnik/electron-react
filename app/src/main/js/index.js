@@ -1,28 +1,28 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { createStore } from 'redux';
-import { Router, browserHistory } from 'react-router';
-import reducers from './reducers/index';
 import routes from './routes';
+import { AppContainer } from 'react-hot-loader';
+import Root from './routes'
 
-const store = createStore(reducers);
+import store from './store'
 
-class Root extends React.Component {
-  render() {
-    return (
-        <Provider store={store} >
-            <Router history={ browserHistory } routes={routes} />
-        </Provider>
+const render = (Component) => {
+    ReactDOM.render(
+        <AppContainer>
+            <Provider store={store}>
+                <Component />
+            </Provider>
+        </AppContainer>,
+        document.getElementById('root')
     )
-  }
 }
 
-ReactDOM.render(
-    <Root />,
-    document.getElementById("root")
-);
+render(Root)
 
 if (module.hot) {
-  module.hot.accept()
+  module.hot.accept('./routes.js', () => {
+      const newRoot = require('./routes').default;
+      render(newRoot)
+  })
 }

@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { getListItem } from '../actions/list_actions';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 
 class ShowListItem extends Component {
 	componentDidMount(){
-		this.props.getListItem(this.props.params.name);
+		this.props.getListItem(this.props.match.params.name);
 	}
 	render(){
 		const { item } = this.props;
@@ -15,7 +15,7 @@ class ShowListItem extends Component {
 
 		return(
 			<div className="row" >
-				<div className="col m4 offset-m4" >
+				<div className="col s12 m4 offset-m4" >
 					<Link to={"/"}>
 						<button type="button" className="waves-effect waves-light btn" style={{ marginTop: 10, marginBottom: 10 }}>Go Back</button>
 					</Link>
