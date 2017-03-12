@@ -7,6 +7,13 @@ const BrowserWindow = electron.BrowserWindow;
 const path = require('path');
 const url = require('url');
 
+const {
+	default: installExtension, 
+	REACT_DEVELOPER_TOOLS, 
+	REDUX_DEVTOOLS
+} = require('electron-devtools-installer');
+
+
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow;
@@ -14,25 +21,33 @@ let mainWindow;
 /** This function will create the mainWindow */
 function createWindow() {
   // Create the browser window.
-  mainWindow = new BrowserWindow({width: 800, height: 600});
+  mainWindow = new BrowserWindow({width: 1024, height: 768});
 
   if(process.env.NODE_ENV === 'development') {
-	// and load the index.html of the app.
-	mainWindow.loadURL(url.format({
-	  pathname: path.join(__dirname, 'index_develop.html'),
-	  protocol: 'file:',
-	  slashes: true,
-	}));
+		// and load the index.html of the app.
+		mainWindow.loadURL(url.format({
+			pathname: path.join(__dirname, 'index_develop.html'),
+			protocol: 'file:',
+			slashes: true,
+		}));
+		
+		installExtension(REACT_DEVELOPER_TOOLS)
+			.then((name) => console.log(`Added Extension:  ${name}`))
+			.catch((err) => console.log('An error occurred: ', err));
 
-	// Open the DevTools.
-	mainWindow.webContents.openDevTools();
+		installExtension(REDUX_DEVTOOLS)
+			.then((name) => console.log(`Added Extension:  ${name}`))
+			.catch((err) => console.log('An error occurred: ', err));
+
+		// Open the DevTools.
+		mainWindow.webContents.openDevTools();
   } else {
-	// and load the index.html of the app.
-	mainWindow.loadURL(url.format({
-	  pathname: path.join(__dirname, 'index.html'),
-	  protocol: 'file:',
-	  slashes: true,
-	}));
+		// and load the index.html of the app.
+		mainWindow.loadURL(url.format({
+			pathname: path.join(__dirname, 'index.html'),
+			protocol: 'file:',
+			slashes: true,
+		}));
   }
 
 
