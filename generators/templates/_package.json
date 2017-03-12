@@ -7,12 +7,10 @@
 		"dev": "NODE_ENV=development electron ./app/src/main/app.js",
 		"prod": "webpack -p --progress --color --config ./configs/webpack.prod.config.js && electron ./app/build/app.js"
   },
-  "repository": "<%= repository %>",
   "keywords": [
 		"Electron",
 		"react"
   ],
-  "author": "<%= author %>",
   "devDependencies": {
 		"babel-core": "^6.10.4",
 		"babel-loader": "^6.2.4",
