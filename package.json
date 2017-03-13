@@ -1,6 +1,6 @@
 {
   "name": "generator-electron-react",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A simple and compact boilerplate for electron and react (redux, router)",
   "scripts": {
     "hot": "webpack-dev-server --color --config ./configs/webpack.dev.config.js",
@@ -17,10 +17,10 @@
     "Electron",
     "react"
   ],
-	"bugs": {
-		"url": "https://github.com/tahnik/generator-electron-react/issues"
-	},
-	"homepage": "https://github.com/tahnik/generator-electron-react#readme",
+  "bugs": {
+    "url": "https://github.com/tahnik/generator-electron-react/issues"
+  },
+  "homepage": "https://github.com/tahnik/generator-electron-react#readme",
   "author": "Tahnik Mustasin",
   "devDependencies": {
     "babel-core": "^6.10.4",
