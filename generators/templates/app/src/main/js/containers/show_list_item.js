@@ -24,7 +24,7 @@ class ShowListItem extends Component {
 						Go Back
 						</button>
 					</Link>
-					<h1>{ item.name }</h1>
+					<h3>{ item.name }</h3>
 					<p>{ item.description }</p>
 				</div>
 			</div>
