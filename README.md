@@ -55,6 +55,7 @@ In the first terminal run
 - Create a new folder for your project
 - Copy all the contents inside generators/templates to your project folder
 - Edit the package.json to change the `<%= name %>` to your project name and `<%= description %>` to your project description
+- Run `npm install`
 - Then run the project as described in the section above
 
 # Contribute
