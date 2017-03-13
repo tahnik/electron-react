@@ -11,12 +11,16 @@
   "files": [
     "generators"
   ],
-  "repository": "https://github.com/electron/electron-quick-start",
+  "repository": "https://github.com/tahnik/generator-electron-react",
   "keywords": [
     "yeoman-generator",
     "Electron",
     "react"
   ],
+	"bugs": {
+		"url": "https://github.com/tahnik/generator-electron-react/issues"
+	},
+	"homepage": "https://github.com/tahnik/generator-electron-react#readme",
   "author": "Tahnik Mustasin",
   "devDependencies": {
     "babel-core": "^6.10.4",

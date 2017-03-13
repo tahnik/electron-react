@@ -1,40 +1,74 @@
-# electron-quick-start
+# Yeoman generator for Electron with React
+A simple and clean boilerplate for Electron and react. It includes:
 
-**Clone and run for a quick way to see Electron in action.**
+- State management with [Redux]
+- Routing with [React-Router v4]
+- [React] and [Redux devtools] for debugging
+- [Jest] for testing
+- .eslint for [ESlint]
+- [Webpack 2] for bundling
+- [Babel] for compiling
 
-This is a minimal Electron application based on the [Quick Start Guide](http://electron.atom.io/docs/tutorial/quick-start) within the Electron documentation.
+### Use with Yeoman generator
+- **If you haven't used Yeoman generator before:** 
+Go to this link: [Yeoman]. Trust me it's damn easy to install and helps a lot
 
-**Use this app along with the [Electron API Demos](http://electron.atom.io/#get-started) app for API code examples to help you get started.**
+- **If you have yeoman installed already**:
 
-A basic Electron application needs just these files:
+    ```bash
+    npm install -g generator-electron-react
+    yo electron-react
+    ```
+    
+### How to run the project
 
-- `package.json` - Points to the app's main file and lists its details and dependencies.
-- `main.js` - Starts the app and creates a browser window to render HTML. This is the app's **main process**.
-- `index.html` - A web page to render. This is the app's **renderer process**.
+- To run in production mode:
 
-You can learn more about each of these components within the [Quick Start Guide](http://electron.atom.io/docs/tutorial/quick-start).
+    ```bash
+    npm run prod
+    ```
 
-## To Use
+- To run in development with hot reloading, open two terminal.
+In the first terminal run 
 
-To clone and run this repository you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
+    ```bash
+    npm run hot
+    ```
+    
+    In the second terminal run 
+    
+    ```bash
+    npm run dev
+    ```
+    
+    The first commands creates a webpack dev server which will watch and reload the bundle as you edit and will it available at https://localhost:8080.
+    The second command will run the electron app in development mode. So it will open up devtools with React and Redux devtools initialized.
+- To run test:
 
-```bash
-# Clone this repository
-git clone https://github.com/electron/electron-quick-start
-# Go into the repository
-cd electron-quick-start
-# Install dependencies
-npm install
-# Run the app
-npm start
-```
+    ```bash
+    npm test
+    ```
 
-Learn more about Electron and its API in the [documentation](http://electron.atom.io/docs/).
+### Ugh, I don't want to use Yeoman
+- You can just clone the repo
+`git clone https://github.com/tahnik/generator-electron-react.git`
+- Create a new folder for your project
+- Copy all the contents inside generators/templates to your project folder
+- Edit the package.json to change the `<%= name %>` to your project name and `<%= description %>` to your project description
+- Then run the project as described in the section above
 
-## Other Example Apps
+# Contribute
+Awesome! Create a new issue or do a pull request.
 
-For more example apps, see the
-[list of boilerplates](http://electron.atom.io/community/#boilerplates)
-created by the awesome electron community.
 
-#### License [CC0 1.0 (Public Domain)](LICENSE.md)
+[Redux]: <http://redux.js.org/>
+[React-Router v4]: <https://reacttraining.com/react-router/>
+[React]: <https://github.com/facebook/react-devtools>
+[Redux devtools]: <https://github.com/gaearon/redux-devtools>
+[Jest]: <https://facebook.github.io/jest/>
+[ESlint]: <http://eslint.org/>
+[Webpack 2]: <https://webpack.js.org/>
+[Babel]: <https://babeljs.io/>
+[Yeoman]: <http://yeoman.io/learning/>
+
+
