@@ -1,6 +1,6 @@
 {
   "name": "generator-electron-react",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "A simple and compact boilerplate for electron and react (redux, router)",
   "scripts": {
     "hot": "webpack-dev-server --color --config ./configs/webpack.dev.config.js",
