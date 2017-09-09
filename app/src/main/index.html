@@ -23,7 +23,7 @@
         devServer.src = 'http://localhost:' + port + '/webpack-dev-server.js';
         document.body.appendChild(devServer);
       } else {
-        const headHTML = document.getElementsByTagName('head')[0].innerHTML;
+        let headHTML = document.getElementsByTagName('head')[0].innerHTML;
         headHTML += '<link type="text/css" rel="stylesheet" href="css/main.css">';
         document.getElementsByTagName('head')[0].innerHTML = headHTML;
 

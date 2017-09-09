@@ -2,11 +2,35 @@
   "name": "electron-react",
   "version": "1.0.0",
   "description": "Boilerplate for Electron and React",
+  "main": "./app/build/app.js",
   "scripts": {
     "dev": "concurrently \"cross-env NODE_ENV=development webpack-dev-server --config webpack/dev.config.js\" \"cross-env NODE_ENV=development electron ./app/src/main/app.js\"",
     "prod": "cross-env NODE_ENV=production webpack --progress --color --config webpack/prod.config.js",
     "start": "npm run prod && electron app/build/app.js",
-    "lint": "eslint --ext .jsx,.js app/src/main --fix"
+    "lint": "eslint --ext .jsx,.js app/src/main --fix",
+    "pack": "electron-builder --dir",
+    "dist": "npm run prod && electron-builder",
+    "postinstall": "electron-builder install-app-deps"
+  },
+  "author": "Tahnik Mustasin",
+  "license": "MIT",
+  "build": {
+    "productName": "electron-react",
+    "win": {
+      "target": "NSIS"
+    },
+    "linux": {
+      "target": [
+        "deb",
+        "AppImage"
+      ]
+    },
+    "mac": {
+      "category": "public.app-category.developer-tools"
+    },
+    "directories": {
+      "output": "release"
+    }
   },
   "keywords": [
     "electron",
@@ -26,6 +50,8 @@
     "copy-webpack-plugin": "^4.0.1",
     "cross-env": "^5.0.5",
     "css-loader": "^0.28.7",
+    "electron": "^1.7.6",
+    "electron-builder": "^19.27.7",
     "electron-devtools-installer": "^2.2.0",
     "eslint": "^4.6.1",
     "eslint-config-airbnb": "^15.1.0",
@@ -44,7 +70,6 @@
     "webpack-node-externals": "^1.6.0"
   },
   "dependencies": {
-    "electron": "^1.7.6",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-redux": "^5.0.6",
