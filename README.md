@@ -1,62 +1,48 @@
-# Yeoman generator for Electron with React
+# ElectronJS + ReactJS boilerplate
+
 A simple and clean boilerplate for Electron and react. It includes:
 
 - State management with [Redux]
 - Routing with [React-Router v4]
 - [React] and [Redux devtools] for debugging
-- [Jest] for testing
 - .eslint for [ESlint]
-- [Webpack 2] for bundling
+- [Webpack 3] for bundling
 - [Babel] for compiling
 
-### Use with Yeoman generator
-- **If you haven't used Yeoman generator before:** 
-Go to this link: [Yeoman]. Trust me it's damn easy to install and helps a lot
+## Usage
 
-- **If you have yeoman installed already**:
+NodeJS v8.3.0
 
-    ```bash
-    npm install -g generator-electron-react
-    yo electron-react
-    ```
-    
-### How to run the project
+- Clone the repo
+`git clone https://github.com/tahnik/electron-react.git`
+- Edit the package.json to change the `name` to your project name and `description` to your project description. Change the `author` as well.
+- Run `npm i`
+- Then run the project as described in the section below
 
-- To run in production mode:
-
-    ```bash
-    npm run prod
-    ```
-
-- To run in development with hot reloading, open two terminal.
-In the first terminal run 
-
-    ```bash
-    npm run hot
-    ```
-    
-    In the second terminal run 
-    
+## How to
+- To run in development mode with hot reloading, open a terminal inside your project and run
     ```bash
     npm run dev
     ```
     
-    The first commands creates a webpack dev server which will watch and reload the bundle as you edit and will it available at https://localhost:8080.
-    The second command will run the electron app in development mode. So it will open up devtools with React and Redux devtools initialized.
-- To run test:
+    This commands creates a webpack dev server which will watch and reload the bundle as you edit and will it available at https://localhost:8080.
+    The command will also run the electron app in development mode. So it will open up devtools with React and Redux devtools initialized.
+- To build the app and test if it is working:
 
     ```bash
-    npm test
+    npm start
     ```
 
-### Ugh, I don't want to use Yeoman
-- You can just clone the repo
-`git clone https://github.com/tahnik/generator-electron-react.git`
-- Create a new folder for your project
-- Copy all the contents inside generators/templates to your project folder
-- Edit the package.json to change the `<%= name %>` to your project name and `<%= description %>` to your project description
-- Run `npm install`
-- Then run the project as described in the section above
+    This command will compile the app in production mode and start the app. Here is you still toggle the developer tools from the menu and see if there is any errors
+
+- To package the app and create a distributable:
+
+    ```bash
+    npm run dist
+    ```
+
+    This will create a relevant distributable file. For example, if you are on Windows, it will create a .exe file in the release folder.
+
 
 # Contribute
 Awesome! Create a new issue or do a pull request.
@@ -68,7 +54,7 @@ Awesome! Create a new issue or do a pull request.
 [Redux devtools]: <https://github.com/gaearon/redux-devtools>
 [Jest]: <https://facebook.github.io/jest/>
 [ESlint]: <http://eslint.org/>
-[Webpack 2]: <https://webpack.js.org/>
+[Webpack 3]: <https://webpack.js.org/>
 [Babel]: <https://babeljs.io/>
 [Yeoman]: <http://yeoman.io/learning/>
 
