@@ -1,0 +1,16 @@
+.view_item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  h2 {
+    margin-top: 3rem;
+    text-transform: capitalize;
+  }
+  p {
+    text-align: center;
+  }
+  button {
+    font-size: 1rem;
+  }
+}
