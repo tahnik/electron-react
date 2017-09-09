@@ -10,7 +10,10 @@
   },
   "keywords": [
     "electron",
-    "react"
+    "react",
+    "react router v4",
+    "redux",
+    "webpack 3"
   ],
   "devDependencies": {
     "babel-core": "^6.26.0",
