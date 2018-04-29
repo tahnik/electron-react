@@ -13,6 +13,7 @@ module.exports = {
       './src/main/res/scss/main.scss',
     ],
   },
+  mode: 'production',
   output: {
     path: path.resolve(__dirname, '../app/build'),
     filename: 'app.bundle.js',

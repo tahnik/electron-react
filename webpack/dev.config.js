@@ -14,6 +14,7 @@ module.exports = {
       './src/main/res/scss/main.scss',
     ],
   },
+  mode: 'development',
   output: {
     path: path.resolve(__dirname, './app/build'),
     filename: 'app.bundle.js',
